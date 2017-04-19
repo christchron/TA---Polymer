@@ -1,0 +1,93 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="promo-sofa">
+	 <style include="iron-flex">
+		.sofa-text{
+		    font-size: 16px;
+		    color: black;
+	        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            width: 300px;
+			margin-top: 25px;
+			margin-left: 20px;
+		}
+
+		.no-decor{
+			text-decoration: none !important;
+		}
+
+		.img{
+			height:82px;
+			width:99px;
+			margin-top:20px;
+		}
+
+		.bold{
+			font-weight: bold;
+		}
+
+		.margin-top-20{
+			margin-top:20px;
+		}
+
+		.margin-top-min-20{
+			margin-top:-20px;
+		}
+
+		.margin-left-50{
+			margin-left:50px;
+		}
+	</style>
+	<template>
+		<div class="margin-top-min-20">
+			<div class='layout horizontal'>
+				<a class="no-decor" href="">
+					<div class="layout horizontal margin-left-50">
+						<div>
+							<img src="../assets/image/sofa-1.png" class="img"/>
+						</div>
+						<div class='sofa-text'>
+							<span class="bold">SOFA </span>
+							<img src="../assets/image/arrow.png"/>
+							<div>Temukan sofa berkualitas dengan harga terjangkau</div>
+						</div>
+					</div>
+				</a>
+				<a class="no-decor" href="">
+					<div class="layout horizontal margin-left-50">
+						<div>
+							<img src="../assets/image/mattress.png" class="img"/>
+						</div>
+						<div class='sofa-text'>
+							<span class="bold">KASUR </span>
+							<img src="../assets/image/arrow.png"/>
+							<div>Koleksi kasur lengkap dengan harga di bawah toko</div>
+						</div>
+					</div>
+				</a>
+				<a class="no-decor" href="">
+					<div class="layout horizontal margin-left-50">
+						<div>
+							<img src="../assets/image/office-1.png" class="img"/>
+						</div>
+						<div class='sofa-text'>
+							<span class="bold">KURSI KANTOR </span>
+							<img src="../assets/image/arrow.png"/>
+							<div>Kursi kantor lengkap dengan harga kompetitif</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "promo-sofa",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

@@ -1,0 +1,188 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="promo-box">
+	<style include="iron-flex">
+		.prom-box{
+		    width: 1280px;
+		    z-index: 1;
+		    position: relative;
+		    margin-top: -148px;
+		    margin-left: 100px;
+		}
+
+		.promo-box-header{
+		    font-size: 25px;
+		    font-weight: 700;
+		    color:white;
+		    background-color:#00b1bb;
+		    text-align: center;
+		    padding: 10px 0 11px;
+		}
+
+		.box{
+			margin-left:1px;
+			margin-top:-1px;
+			background:white;
+			border:1px solid #00b1bb;
+		}
+
+		.promo-img{
+			max-width: 25%;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+
+		.product-box{
+			margin-left: 200px;
+			margin-top: 20px;
+		}
+
+		.product{
+			width:180px;
+			margin-left: 50px;
+		}
+
+		.center{
+			text-align: center;
+		}
+
+		.price-tag{
+		    font-size:15px;
+		    top:-.5em;
+		    line-height: 0;
+		    position: relative;
+		    vertical-align: baseline;
+		    margin-right: 3px;
+		}
+
+		.price-number{
+		    font-size:20px;
+		    font-weight: bold;
+		}
+
+		.product-name{
+		    font-size: 20px;
+		    color: #82888a;
+		}
+	</style>
+	<template>
+		<div class="prom-box">
+			<div class="promo-box-header">
+				Temukan inspirasi rumah idaman dan dekorasi dengan harga terjangkau
+			</div>
+			<div class="layout horizontal box">
+				<div class="promo-img">
+					<img src='../assets/image/promo-1.jpg' style="width:500px"/>	 
+					<img src='../assets/image/promo-2.jpg' style="width:500px"/>
+				</div>
+				<div class="product-box">
+					<div class="layout horizontal">
+						<div class="product">
+							<div class="center">
+								<img src='../assets/image/
+								produk-1.jpg' style="width: 180px"/>
+							</div>
+							<div class="center">
+								<span class="price-tag">Rp</span>
+								<span class="price-number">68,000</span>
+							</div>
+							<div class="center">
+								<div class="product-name">
+									Pasabache Garden Jar 0.6 Ltr 2pcs
+								</div>
+							</div>
+						</div>
+						<div class="product"	>
+							<div class="center">
+								<img src='../assets/image/
+								produk-2.jpg' style="width: 180px"/>
+							</div>
+							<div class="center">
+								<span class="price-tag">Rp</span>
+								<span class="price-number">174,000</span>
+							</div>
+							<div class="center">
+								<div class="product-name">
+									Oxone Kitchen Tool OX-964
+								</div>
+							</div>
+						</div>
+						<div class="product"	>
+							<div class="center">
+								<img src='../assets/image/
+								produk-3.jpg' style="width: 180px"/>
+							</div>
+							<div class="center">
+								<span class="price-tag">Rp</span>
+								<span class="price-number">180,000</span>
+							</div>
+							<div class="center">
+								<div class="product-name">
+									Fancy Furni Antler cutting board
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layout horizontal">
+						<div class="product"	>
+							<div class="center">
+								<img src='../assets/image/
+								produk-4.jpg' style="width: 180px"/>
+							</div>
+							<div class="center">
+								<span class="price-tag">Rp</span>
+								<span class="price-number">616,000</span>
+							</div>
+							<div class="center">
+								<div class="product-name">
+									Neoflam Aeni 28cm wok Apple green
+								</div>
+							</div>
+						</div>
+						<div class="product"	>
+							<div class="center">
+								<img src='../assets/image/
+								produk-5.jpg' style="width: 180px"/>
+							</div>
+							<div class="center">
+								<span class="price-tag">Rp</span>
+								<span class="price-number">39,900</span>
+							</div>
+							<div class="center">
+								<div class="product-name">
+									IKEA Elly Lap Dapur 4pcs
+								</div>
+							</div>
+						</div>
+						<div class="product"	>
+							<div class="center">
+								<img src='../assets/image/
+								produk-6.jpg' style="width: 180px"/>
+							</div>
+							<div class="center">
+								<span class="price-tag">Rp</span>
+								<span class="price-number">165,000</span>
+							</div>
+							<div class="center">
+								<div class="product-name">
+									As Seen On TV Genius Nicer Dicer Plus
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "promo-box",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

@@ -1,0 +1,24 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="hello-world">
+	<style></style>
+	<template>
+		<h1>{{title}}</h1>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "hello-world",
+		properties:{
+			title:{
+				type:"String",
+				value:"Hello World"
+			}
+		},
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

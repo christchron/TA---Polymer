@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-icons/maps-icons.html">
+
+<dom-module id="header">
+	 <style include="iron-flex">
+		
+	</style>
+	<template>
+		<div class="layout horizontal">
+			<div class="flex-12 header">
+				<div class="flex-2 header-text logo">
+				  	<a href="/"><img src='logo-text.png'/></a>
+				</div>
+				<div class="flex-3 margin-top-20">
+					<div class="search-box">
+						<form class="search-box">
+							<iron-icon icon="maps:search"></iron-icon>
+							<input class="search-box" type="text" placeholder="Cari Semua Barang...    contoh: Mug..."/>
+						</form>
+					</div>
+				</div>
+				<div class="flex-6 float-right margin-top-15">
+					<div class="flex-2 header-text margin-right-100">Berjualan di Dekoruma</div>
+					<div class="flex-2 header-text">Bantuan</div>
+					<a href="/register"> <div class="flex-2 header-text">Register</div></a>
+					<a href="/login"><div class="flex-2 header-text">Login</div></a>
+					<div class="flex-2 header-text">Troli</div>
+				</div>
+		  	</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "header",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

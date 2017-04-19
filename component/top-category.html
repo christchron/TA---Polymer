@@ -1,0 +1,38 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="top-category">
+	<style include="iron-flex">
+		.center{
+			text-align: center;
+			font-size: 10px;
+			color:#292b2c;
+		}
+
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		}
+
+		.bold{
+			font-weight: bold;
+		}
+
+
+	</style>
+	<template>
+		<div style="margin-top:100px" class="font-fam">
+			<div class="center bold">Top Categories Furniture</div>
+			<div class="center">Sofa | Lemari | Lemari Pakaian | Kasur | Spring Bed | Kursi | Kursi Tamu | Kursi Kantor | Meja | Meja TV | Meja Makan | Meja Belajar | Rak Sepatu | Rak Buku | Tempat Tidur</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "top-category",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

@@ -1,0 +1,97 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="poly-header">
+	 <style include="iron-flex">
+		.header{
+		    position: fixed !important;
+		    z-index: 2 !important;
+		    margin-top: -10px !important;
+		    background: white !important;
+		    white-space: nowrap !important;
+		    width:1500px;
+		}
+
+		.header-text{
+			margin-right: 30px;
+		    white-space: nowrap;
+		    height: 60px;
+		    line-height: 50px;
+		    position: relative;
+		    font-size:18px;
+		    font-family: Helvetica Neue,Helvetica,sans-serif;
+		    color: #82888a;
+		    font-weight:700;
+		}
+
+		.logo{
+		    margin-top: 10px;
+		    margin-left: 30px;
+		}
+
+		.icon{
+			width:30px;
+			height:30px;
+		}
+
+		.search-box{
+		    width: 100%;
+		    height: 40px;
+		    font-size: 15px !important;
+		    border: none;
+		    white-space: nowrap;
+		    font-weight: bold
+		}
+
+		.float-right{
+		    float:right;
+		}
+
+		.s-box{
+			margin-left:50px;
+			margin-top:20px;
+			width:300px;
+		}
+
+		.h-options{
+			margin-top:15px;
+			margin-left:300px;
+		}
+
+	</style>
+	<template>
+		<div class="layout horizontal">
+			<div class="header layout horizontal">
+				<div class="logo">
+				  	<a href="/"><img src='../assets/image/logo-text.png'/></a>
+				</div>
+				<div class="layout horizontal s-box">
+					<div class="search-box">
+						<form class="search-box">
+							<iron-icon icon="icons:search" class="icon"></iron-icon>
+							<input class="search-box" type="text" placeholder="Cari Semua Barang...    contoh: Mug..."/>
+						</form>
+					</div>
+				</div>
+				<div class="float-right h-options layout horizontal">
+					<a class="header-text margin-right-100">Berjualan di Dekoruma</a>
+					<a class="header-text">Bantuan</a>
+					<a class="header-text" href="/register">Register</a>
+					<a class="header-text" href="/login">Login</a>
+					<a class="header-text">Troli</a>
+				</div>
+		  	</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "poly-header",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

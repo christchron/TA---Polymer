@@ -1,0 +1,134 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="poly-footer">
+	<style include="iron-flex">
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		}
+		.background{
+			height:80px; 
+			background:rgba(130, 136, 138, 0.12);
+		}
+
+		.img-position{
+			margin-left: 100px;
+			margin-top: 20px;
+		}
+
+		.img-size{
+			width:150px;
+			height:45px;
+		}
+
+		.tagline{
+			font-size: 17px;
+			margin-left: 50px;
+			width: 610px;
+			margin-top: 20px;
+		}
+
+		.form-position{
+			margin-top: 20px;
+			margin-left: 30px;
+		}
+
+		.input-box-style{
+			width: 200px;
+			height: 30px;
+			font-size: 17px !important;
+		}
+
+		.button-position{
+			margin-top:20px;
+			margin-left: 20px;
+		}
+
+		.button-style{
+			width: 200px !important;
+			height: 30px;
+			font-size: 12px !important;
+		}
+
+		.copyright-style{
+			font-size: 15px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.center{
+			text-align: center;
+		}
+
+		.btn.btn-primary:focus, .btn.btn-primary:hover {
+		    border-color: #56d2d9;
+		    background-color: #56d2d9;
+		    border-bottom-color: #17868c;
+		    color: #fff;
+		}
+		
+		.btn-primary:hover {
+		    color: #fff;
+		    background-color: #025aa5;
+		    border-color: #01549b;
+		}
+		
+		.btn:focus, .btn:hover {
+		    text-decoration: none;
+		}
+		
+		.btn.btn-primary {
+		    border-color: #00b1bb;
+		    background-color: #00b1bb;
+		    border-bottom-color: #17868c;
+		    color: #fff;
+		}
+		.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+		    color: #fff;
+		    background-color: #3071a9;
+		    border-color: #285e8e;
+		}
+		.btn:hover, .btn:focus {
+		    color: #333;
+		    text-decoration: none;
+		}
+		.btn-block {
+		    display: block;
+		    width: 100%;
+		}
+	</style>
+	<template>
+		<div style="margin-top:10px">
+			<div class="layout horizontal background">
+				<img src="../assets/image/play-store.png" class="img-size img-position"/>
+				<div class="tagline font-fam">
+					<span>Install</span>
+					<strong> Aplikasi Android Dekoruma</strong>
+					<span> yuk! Masukkan no HP kamu dan Kania akan mengirim link downloadnya langsung ke HP kamu :-)</span>
+				</div>
+				<div class="form-position">
+					<form>
+						<input type="text" placeholder="e.g. +628180001111" class="input-box-style"/>
+					</form>
+				</div>
+				<div class="button-position">
+					<button type="submit" class="btn btn-block btn-primary button-style" >Kirim Link Download</button>
+				</div>
+			</div>
+			<div class="center copyright-style font-fam">
+				<div>Copyright 2017 © PT Dekoruma Inovasi Lestari | Artikel | Tech Career (Strong Engineer Urgently Wanted!)</div>
+				<div>Customer Service: (021) 5890-9401 Senin - Jumat 09:00 - 18:00 E-mail: hello@dekoruma.com</div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "poly-footer",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

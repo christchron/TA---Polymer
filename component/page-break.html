@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="page-break">
+	<style include="iron-flex">
+		.img-size{
+			width:1520px;
+			margin-top:25px;
+			margin-bottom:25px;
+		}
+	</style>
+	<template>
+		<img src={{imgsrc}} class="img-size"/>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "page-break",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

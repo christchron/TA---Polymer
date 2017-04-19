@@ -1,0 +1,28 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="beli-yuk">
+	<style include="iron-flex">
+		.img-size{
+			height:290px;
+			margin-left:50px;
+		}
+	</style>
+	<template>
+		<div className="layout horizontal center">
+			<img src="../assets/image/lust-list.png" class="img-size"/>	
+			<img src="../assets/image/gift-guide.png" class="img-size"/>	
+			<img src="../assets/image/glam-glow.png" class="img-size"/>	
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "beli-yuk",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

@@ -1,0 +1,49 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="product-by-price">
+	<style include="iron-flex">
+		.img-size{
+			height:300px;
+			margin-left: 60px;
+		}
+
+		.first-text{
+			font-weight: bold;
+			text-align: center;
+			font-size: 30px;
+		}
+
+		.second-text{
+			font-size: 25px;
+			text-align: center;
+			color: #82888a;
+		}
+
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		}
+	</style>
+	<template>
+		<div style="margin-top:50px;" class="font-fam">
+			<div class="first-text">Produk Memukau Harga Terjangkau</div>
+			<div class="second-text">Semua yang kamu butuhkan untuk rumah idamanmu</div>
+			<div class="layout horizontal">
+				<img src='../assets/image/5.2.1.png' class="img-size"/>
+				<img src='../assets/image/5.3.png' class="img-size"/>
+				<img src='../assets/image/5.4.png' class="img-size"/>
+				<img src='../assets/image/5.5.png' class="img-size"/>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "product-by-price",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

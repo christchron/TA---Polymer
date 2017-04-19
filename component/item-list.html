@@ -1,0 +1,47 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="item-list">
+	 <style include="iron-flex">
+		.item-list{
+			padding: 0 17px;
+		    font-family: NeutraText-Bold,Helvetica Neue;
+		    font-weight: 700;
+		    font-size: 17px;
+		    color: #82888a;
+		    margin-top: 20px;
+		    margin-bottom: 20px;
+		}
+
+		.item-list-style{
+			margin-top:50px;
+			margin-left:-15px;
+			width:1520px;
+			border-bottom:1px solid #ccc;
+		}
+	</style>
+	<template>
+		<div class="layout horizontal item-list-style">
+			<a class="item-list" href="/search?category=makan">RUANG MAKAN</a>
+			<a class="item-list" href="/search?category=dapur">DAPUR</a>
+			<div class="item-list">DEKORASI</div>
+			<div class="item-list">KAMAR TIDUR</div>
+			<div class="item-list">KASUR</div>
+			<div class="item-list">FURNITUR</div>
+			<div class="item-list">KAMAR MANDI</div>
+			<div class="item-list">PERABOTAN</div>
+			<div class="item-list">LAMPU</div>
+			<div class="item-list">NEW ARRIVALS</div>
+	  	</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "item-list",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

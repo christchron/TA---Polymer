@@ -1,0 +1,42 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="promo-banner">
+	<style include="iron-flex">
+		.banner-text{
+			font-size: 20px;
+			font-weight: bold;
+			color:#6A6a6a;
+			vertical-align: bottom;
+			margin-left:5px;
+			margin-top:3px;
+		}
+
+	</style>
+	<template>
+		<div class="layout horizontal" style={{styling}}>
+			<div class="layout horizontal">
+				<img src='../assets/image/usp-price-down.png' style="width: 30px;height:30px"/>
+				<div class="banner-text">Harga jujur sepanjang tahun</div>
+			</div>
+			<div class="layout horizontal">
+				<img src='../assets/image/usp-fast-shipping.png' style="width: 30px;height:30px;margin-left:50px"/>
+				<div class="banner-text">Gratis ongkos kirim & COD*</div>
+			</div>
+			<div class="layout horizontal">
+				<img src='../assets/image/usp-bulk-saving.png' style="width: 30px;height:30px;margin-left:50px"/>
+				<div class="banner-text">Tambah barang tambah murah</div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "promo-banner",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

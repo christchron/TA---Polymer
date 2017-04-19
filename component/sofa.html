@@ -1,0 +1,89 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="sofa">
+	 <style include="iron-flex">
+		.sofa-text{
+		    font-size: 16px;
+		    color: black;
+		}
+
+		.img{
+			height:82px;
+			width:99px;
+			margin-top:20px;
+		}
+
+		.bold{
+			font-weight: bold;
+		}
+
+		.margin-top-20{
+			margin-top:20px;
+		}
+	</style>
+	<template>
+		<div class='layout horizontal'>
+			<div class='col-md-12'>
+				<div class='col-md-4'>
+					<div>
+				<a href="">
+					<div class="sofa-text">
+						<div class='col-md-3'>
+							<img src="../assets/image/sofa-1.png" class="img"/>
+						</div>
+						<div class='col-md-9 margin-top-20'>
+							<span class="bold">SOFA </span>
+							<img src="../assets/image/arrow.png"/>
+							<div>Temukan sofa berkualitas dengan harga terjangkau</div>
+						</div>
+					</div>
+				</a>
+					</div>
+				</div>
+				<div class='col-md-4'>
+					<div>
+						<a href="">
+							<div class="sofa-text">
+								<div class='col-md-3'>
+									<img src="../assets/image/mattress.png" class="img"/>
+								</div>
+								<div class='col-md-9 margin-top-20'>
+									<span class="bold">KASUR </span>
+									<img src="../assets/image/arrow.png"/>
+									<div>Koleksi kasur lengkap dengan harga di bawah toko</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class='col-md-4'>
+					<div>
+						<a href="">
+							<div class="sofa-text">
+								<div class='col-md-3'>
+									<img src="../assets/image/office-1.png" class="img"/>
+								</div>
+								<div class='col-md-9 margin-top-20'>
+									<span class="bold">KURSI KANTOR </span>
+									<img src="../assets/image/arrow.png"/>
+									<div>Kursi kantor lengkap dengan harga kompetitif</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "sofa",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

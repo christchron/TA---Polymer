@@ -1,0 +1,46 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="item-list">
+	<style>
+		.item-list{
+			padding: 0 17px;
+		    font-family: NeutraText-Bold,Helvetica Neue;
+		    font-weight: 700;
+		    font-size: 17px;
+		    color: #82888a;
+		    margin-top: 20px;
+		    margin-bottom: 20px;
+		}
+	</style>
+	<template>
+		<div className="row" style={{marginTop:"50px", marginLeft:"-15px", width:"1520px", borderBottom:"1px solid #ccc"}}>
+			<a href="/search?category=makan"><div className="item-list">RUANG MAKAN</div></a>
+			<a href="/search?category=dapur"><div className="item-list">DAPUR</div></a>
+			<div className="item-list">DEKORASI</div>
+			<div className="item-list">KAMAR TIDUR</div>
+			<div className="item-list">KASUR</div>
+			<div className="item-list">FURNITUR</div>
+			<div className="item-list">KAMAR MANDI</div>
+			<div className="item-list">PERABOTAN</div>
+			<div className="item-list">LAMPU</div>
+			<div className="item-list">NEW ARRIVALS</div>
+	  	</div>
+	);
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "hello-world",
+		properties:{
+			title:{
+				type:"String",
+				value:"Hello World"
+			}
+		},
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>

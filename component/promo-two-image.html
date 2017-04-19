@@ -1,0 +1,28 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="promo-two-image">
+	<style include="iron-flex">
+		
+	</style>
+	<template>
+		<div class="layout horizontal">
+			<div style={{styling1}}>
+				<img src={{imgsrc1}} style="width:100%"/>
+			</div>
+			<div style={{styling2}}>
+				<img src={{imgsrc2}} style="width:100%"/>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "promo-two-image",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>
