@@ -1,0 +1,120 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="register-page">
+	<style include="iron-flex">
+		.decorative-input{
+		    background-image: url(https://a2.muscache.com/airbnb/static/signinup/text-field-icons-9c18e4e23864cb33a8f0f7c32c0b86ee.png);
+		    background-repeat: no-repeat;
+		    background-position: right 11px;
+		    box-sizing: border-box;
+		    display: block;
+		    font-size: 14px !important;
+		    border: 1px solid #dce0e0;
+		    height: 40px;
+		    padding: 10px;
+		    width: 100%!important;
+		}
+
+		.decorative-input[type=email] {
+		    background-position: right -33px;
+		}
+
+		.decorative-input.otp-input, .decorative-input.recaptcha_response_field, .decorative-input[type=password] {
+		    background-position: right -77px;
+		}
+
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		}
+
+		.bold{
+			font-weight: bold;
+		}
+
+		.btn.btn-primary:focus, .btn.btn-primary:hover {
+		    border-color: #56d2d9;
+		    background-color: #56d2d9;
+		    border-bottom-color: #17868c;
+		    color: #fff;
+		}
+		.btn-primary:hover {
+		    color: #fff;
+		    background-color: #025aa5;
+		    border-color: #01549b;
+		}
+		.btn:focus, .btn:hover {
+		    text-decoration: none;
+		}
+		.btn.btn-primary {
+		    border-color: #00b1bb;
+		    background-color: #00b1bb;
+		    border-bottom-color: #17868c;
+		    color: #fff;
+		}
+
+		.register{
+		    margin-top: 90px;
+		    width: 350px;
+		    border: 1px solid #dce0e0;;
+		    margin-left: 750px;
+		    margin-bottom: 15px;
+		}
+
+		.register-box{
+			width:300px;
+			margin-left: 22.5px;
+			border-bottom: 1px solid #dce0e0;
+		}
+
+		.reg-position{
+			text-align: right;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 14px !important;
+		}
+
+		.btn-daftar{
+		    width: 70px;
+		    height: 35px;
+		    font-size: 15px !important;
+		}
+
+		.lgn{
+			margin:20px;
+			font-size: 15px;
+		}
+	</style>
+	<template>
+		<div class="register">
+			<div style="margin:20px"><h1 class="bold">Register</h1></div>
+			<div class="register-box">
+				<form>
+					<input class="decorative-input" type="text" placeholder="Nama"/>
+					<input class="decorative-input" type="email" placeholder="Email"/>
+					<input class="decorative-input" type="password" placeholder="*Buat Password Baru"/>
+				</form>
+				<div style="margin-top:10px;color:#777">
+					<small style="font-size:12px !important">Dengan menekan 'Daftar', saya mengkonfirmasi kalau saya setuju dengan Kebijakan Privasi</small>
+				</div>
+				<div class="reg-position">
+					<button class="btn btn-primary btn-large btn-daftar">Daftar</button>
+				</div>
+			</div>
+			<div class="lgn">
+				<span>Sudah terdaftar di Dekoruma?</span>
+				<a href="#/login"> Login</a>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "register-page",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>
