@@ -1,0 +1,136 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="product-recommendation">
+	<style include="iron-flex">
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		    color:#292b2c;
+		}
+		.center{
+			text-align: center;
+		}
+		.bt-ccc{
+			border-top: 1px solid #ccc;
+		}
+		.first-text{
+			font-size: 20px;
+			margin-left: 40px;
+			margin-top: 20px;
+		}
+		.img-box{
+			width:180px;
+			margin-left: 50px;
+		}
+		.img-size{
+			width:180px;
+		}
+		.price-tag{
+		    font-size:15px;
+		    top:-.5em;
+		    line-height: 0;
+		    position: relative;
+		    vertical-align: baseline;
+		    margin-right: 3px;
+		}
+
+		.price-number{
+		    font-size:20px;
+		    font-weight: bold;
+		}
+
+		.product-recommendation-name{
+		    font-size: 15px;
+		    color: #82888a;
+		}
+	</style>
+	<template>
+		<div class="bt-ccc font-fam">
+			<div style="margin-left:150px">
+				<div class="first-text"><span>Yang lain juga lihat</span></div>
+				<div class="layout horizontal">
+					<div class="img-box">
+						<div class="center">
+							<img src='../assets/image/panci-2.jpg' class="img-size"/>
+						</div>
+						<div class="center">
+							<span class="price-tag">Rp</span>
+							<span class="price-number">792,000</span>
+						</div>
+						<div class="center">
+							<div class="product-recommendation-name">
+								Neoflam Diamond pan set (24cm Fry pan, 28cm wok)
+							</div>
+						</div>
+					</div>
+					<div class="img-box">
+						<div class="center">
+							<img src='../assets/image/panci-3.jpg' class="img-size"/>
+						</div>
+						<div class="center">
+							<span class="price-tag">Rp</span>
+							<span class="price-number">786,000</span>
+						</div>
+						<div class="center">
+							<div class="product-recommendation-name">
+								Neoflam Amie 28cm Two handle wok with glass lid
+							</div>
+						</div>
+					</div>
+					<div class="img-box">
+						<div class="center">
+							<img src='../assets/image/panci-4.jpg' class="img-size"/>
+						</div>
+						<div class="center">
+							<span class="price-tag">Rp</span>
+							<span class="price-number">300,000</span>
+						</div>
+						<div class="center">
+							<div class="product-recommendation-name">
+								Neoflam Reverse 24cm Fry pan with induction
+							</div>
+						</div>
+					</div>
+					<div class="img-box">
+						<div class="center">
+							<img src='../assets/image/panci-5.jpg' class="img-size"/>
+						</div>
+						<div class="center">
+							<span class="price-tag">Rp</span>
+							<span class="price-number">1,350,000</span>
+						</div>
+						<div class="center">
+							<div class="product-recommendation-name">
+								Neoflam Aeni pink wedding set (18cm sauce pan, 20cm casserole)
+							</div>
+						</div>
+					</div>
+					<div class="img-box">
+						<div class="center">
+							<img src='../asse	ts/image/panci-6.jpg' class="img-size"/>
+						</div>
+						<div class="center">
+							<span class="price-tag">Rp</span>
+							<span class="price-number">365,000</span>
+						</div>
+						<div class="center">
+							<div class="product-recommendation-name">
+								Neoflam Reverse 28cm Fry pan with Induction
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "product-recommendation",
+
+		ready: function(){
+			console.log("product-recommendation")
+		}
+	})
+</script>

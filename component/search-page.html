@@ -1,0 +1,145 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../component/search-track.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="search-page">
+	<style include="iron-flex">
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		    color:#292b2c;
+		}
+		.tampilan-hasil{
+			width: 150px;
+			font-size: 13px;
+			height: 1000px;
+			margin-left: 30px;
+			text-align: left;
+		}
+		.category{
+			font-weight: 500;
+			margin-left: 10px;
+		}
+		.product{
+			margin-left: 50px;
+			margin: 30px;
+			width: 250px;
+		}
+		.center{
+			text-align: center;
+		}
+		.max-img{
+			max-width: 200px;
+			min-height: 200px;
+		}
+		.price-tag{
+		    font-size:15px;
+		    top:-.5em;
+		    line-height: 0;
+		    position: relative;
+		    vertical-align: baseline;
+		    margin-right: 3px;
+		}
+
+		.price-number{
+		    font-size:20px;
+		    font-weight: bold;
+		}
+		.product-name{
+		    font-size: 20px;
+		    color: #82888a;
+		}
+	</style>
+	<template>
+		<div class="font-fam">
+			<div class="layout horizontal" style="margin-left:0px">
+				<search-track></search-track>
+			</div>
+			<div class="layout horizontal">
+				<div class="tampilan-hasil">
+					<div><h4 style="text-align:left">Tampilkan hasil untuk: </h4></div>
+					<div class="category">dapur (25)</div>
+				</div>
+				<div>
+					<template is="dom-repeat" items="[[chunkedData]]" as="chunked" id="myId">
+						<div class="layout horizontal">
+							<template is="dom-repeat" items="[[chunked]]" as="produk">
+					            <div class="product">
+									<a href="#/produk?id=">
+										<div class="center" style="height:200px">
+											<img src={{handleUrlName(produk.image)}} class="max-img"/>
+										</div>
+										<div class="center" style="color:#82888a">
+											<span class="price-tag">Rp</span>
+											<span class="price-number">{{produk.price}}</span>
+										</div>
+										<div class="center">
+											<div class="product-name">
+												{{produk.name}}
+											</div>
+										</div>
+									</a>
+								</div>
+					        </template>
+						</div>
+					</template>
+				</div>
+			</div>
+		</div>
+		<iron-ajax
+	        id="requestProductData"
+	        url="/assets/json/dekoruma.json"
+	        params='{"type":"all"}'
+	        handle-as="json"
+	        on-response="handleResponse">
+	    </iron-ajax>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "search-page",
+		properties: {
+            data: {
+                type: Array
+            },
+            chunkedData:{
+            	type: Array
+            },
+            test:{
+            	type:Array,
+            	value:[[{name:"randi",price:15324},{name:"randi",price:15324},{name:"randi",price:15324},{name:"randi",price:15324}]]
+            }
+        },
+        ready: function () {
+            this.$.requestProductData.generateRequest();
+        },
+        handleResponse: function (data) {
+        	var tempData=[];
+            this.data = data.detail.response;
+            var temp = [];
+            for (var i = 0;i<data.detail.response.produk.length;i++){
+            	temp.push(data.detail.response.produk[i])
+            	if (i == data.detail.response.produk.length-1){
+            		tempData.push(temp);
+            	}
+            	if (data.detail.response.produk[i].id%4 == 0){
+            		tempData.push(temp);
+            		temp=[];
+            	}
+            }
+            this.data=tempData;
+            console.log('data',this.data);
+            this.chunkedData=tempData;
+            this.$.myId.render()
+
+        },
+        handleUrlName: function (url){
+        	return "../assets/image/"+url;
+        },
+        addIterator: function(){
+        	this.iterator++;
+        },
+        arrayify: function(obj) { return Object.keys(obj).map(function(k) { return obj[k]; }) }
+	});
+</script>

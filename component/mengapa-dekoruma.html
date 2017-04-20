@@ -1,0 +1,84 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="mengapa-dekoruma">
+	<style include="iron-flex">
+		.mengapa-dekoruma-style{
+		    margin-bottom: 20px;
+		    height: 200px;
+		    background: rgba(238, 238, 238, 0.38);
+		    border-bottom: 1px solid #ccc;
+		    margin-left: -15px;
+		    width: 1520px;
+		    margin-top: 30px;
+		}
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		    color:#292b2c;
+		}
+		.second-outer{
+			margin-left: 40px;
+			padding-top: 30px;
+		}
+		.title-text{
+			color: #565a5c;
+			font-size: 30px;
+		}
+		.img-style{
+			width: 40px;
+			height: 40px;
+			margin: 20px;
+		}
+		.text-title{
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+			vertical-align: bottom;
+		}
+		.text-content{
+			font-size: 15px;
+			color: #333;
+			vertical-align: bottom;
+		}
+	</style>
+	<template>
+		<div class="mengapa-dekoruma-style font-fam">
+			<div class="second-outer">
+				<div class="title-text">Mengapa ke Dekoruma.com?</div>
+				<div class="layout horizontal" style="margin-top:10px">
+					<div class="layout horizontal" style="margin-left:0px">
+						<img src='../assets/image/usp-price.png' class="img-style"/>
+						<div style="width:370px">
+							<div class="text-title">Mulai pencarian produk rumah sendiri</div>
+							<div class="text-content">Ribuan produk pilihan dengan harga paling ekonomis & harga sesuai kualitas.</div>
+						</div>
+					</div>
+					<div class="layout horizontal"  style=marginLeft:"30px">
+						<img src='../assets/image/usp-price-down.png' class="img-style"/>
+						<div style="width:370px">
+							<div class="text-title">Harga Jujur Sepanjang Tahun</div>
+							<div class="text-content">Dekoruma.com tidak menaikkan harga lalu memberikan diskon besar-besaran.</div>
+						</div>
+					</div>
+					<div class="layout horizontal"  style=marginLeft:"30px">
+						<img src='../assets/image/usp-cart.png' class="img-style"/>
+						<div style="width:370px">
+							<div class="text-title">Pesanan Sampai di Depan Rumah</div>
+							<div class="text-content">Pilih barang apapun di Dekoruma.com, diantar GRATIS dan bisa bayar dirumah *</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "mengapa-dekoruma",
+
+		ready: function(){
+			console.log("mengapa-dekoruma")
+		}
+	})
+</script>

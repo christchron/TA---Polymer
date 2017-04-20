@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../component/product-view.html">
+<link rel="import" href="../component/item-list.html">
+<link rel="import" href="../component/promo-banner.html">
+<link rel="import" href="../component/product-recommendation.html">
+<link rel="import" href="../component/product-description.html">
+<link rel="import" href="../component/info-pengiriman.html">
+<link rel="import" href="../component/info-disclaimer.html">
+<link rel="import" href="../component/mengapa-dekoruma.html">
+<link rel="import" href="../component/search-track.html">
+
+<dom-module id="product-page">
+	<style>
+	</style>
+	<template>
+		<item-list></item-list>
+		<search-track></search-track>
+		<promo-banner styling="margin-left: 250px !important;margin-bottom: 50px !important; "></promo-banner>
+		<product-view></product-view>
+		<product-recommendation></product-recommendation>
+		<product-description></product-description>
+		<info-pengiriman></info-pengiriman>
+		<info-disclaimer></info-disclaimer>
+		<mengapa-dekoruma></mengapa-dekoruma>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "product-page",
+
+		ready: function(){
+			console.log("product-page")
+		}
+	})
+</script>

@@ -1,0 +1,106 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="product-view">
+	<style include="iron-flex">
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		    color:#292b2c;
+		}
+		.price-style{
+			margin-left: 0px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.product-view-name{
+		    font-size: 30px;
+		    letter-spacing: normal;
+		    font-weight: normal;
+		    line-height: 1.1;
+		    color: #6A6a6a;
+		}
+		.product-view-description{
+		    font-size:15px;
+		}
+		.ready-stock{
+		    font-size: 15px;
+		    width: 100px;
+		    margin-left:20px;
+		}
+		.btn-beli-sekarang{
+		    height: 50px;
+		    font-size: 20px !important;
+		}
+		.stock-amount{
+		    font-size: 15px;
+		    margin: 5px 0px;
+		}
+		.btn.btn-primary {
+		    border-color: #00b1bb;
+		    background-color: #00b1bb;
+		    border-bottom-color: #17868c;
+		    color: #fff;
+		}
+		.btn-block {
+		    display: block;
+		    width: 100%;
+		}
+		.price {
+		    font-weight: 700;
+		    display: inline-block;
+		    font-size: 24px;
+		    color: #333;
+		}
+
+		.price[role=currency] {
+		    font-size: 100%;
+		    top: -1em;
+		    line-height: 0;
+		    position: relative;
+		    vertical-align: baseline;
+		    margin-right: 3px;
+		}
+	</style>
+	<template>
+		<div class="layout horizontal font-fam" style="margin-left:150px">
+			<img src="../assets/image/dapur-1.jpg" style="width:150px; height:100%"/>
+			<img src="../assets/image/dapur-1.jpg" style="margin:50px;width:550px; height:100%"/>
+			<div style="width:400px; color:#6A6a6a">
+				<h1 class="product-view-name">IDEAL PANCI MASAK TROPICANA SET 16/24 CM BLUE ROYAL HERITAGE</h1>
+				<div class="product-view-description">Panci dari Ideal</div>
+				<div style="font-size:15px; margin-top:15px" >
+					<img src="../assets/image/icon-ongkir-gratis.png" style="width:27px"/>
+					<span> GRATIS Ongkir + Bayar di tempat*</span>
+				</div>
+				<div class="layout horizontal price-style">
+					<div style="margin-top:5px">
+						<span class="price" role="currency" >Rp</span>
+						<span class="price" role="price">325000</span>
+					</div>
+					<div class="ready-stock">
+						<span>Produk ini Ready Stock</span>
+					</div>
+				</div>
+				<div class="btn-beli-sekarang">
+					<button type="submit" class="btn btn-x-large btn-block btn-primary btn-beli-sekarang">Beli Sekarang</button>
+				</div>
+				<div class="stock-amount">
+					<span>Stok tersedia 7 buah</span>
+				</div>
+				<div>
+					<img src="../assets/image/multibuy-offer.png"/>
+				</div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "product-view",
+
+		ready: function(){
+			console.log("work")
+		}
+	})
+</script>  

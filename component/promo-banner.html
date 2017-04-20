@@ -3,6 +3,10 @@
 
 <dom-module id="promo-banner">
 	<style include="iron-flex">
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		    color:#292b2c;
+		}
 		.banner-text{
 			font-size: 20px;
 			font-weight: bold;
@@ -14,7 +18,7 @@
 
 	</style>
 	<template>
-		<div class="layout horizontal" style={{styling}}>
+		<div class="layout horizontal font-fam" style={{styling}}>
 			<div class="layout horizontal">
 				<img src='../assets/image/usp-price-down.png' style="width: 30px;height:30px"/>
 				<div class="banner-text">Harga jujur sepanjang tahun</div>

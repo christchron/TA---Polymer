@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="info-pengiriman">
+	<style include="iron-flex">
+		.outer{
+			font-size: 15px;
+			width: 500px;
+			margin-left: 180px;
+			margin-top: 30px;
+		}
+		.width-250{
+			width: 250px;
+		}
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		    color:#292b2c;
+		}
+	</style>
+	<template>
+		<div class="outer font-fam">
+			<div style="border-bottom: 1px solid #ccc"><div style="margin-bottom:5px">Pengiriman</div></div>
+			<div class="layout horizontal" style="margin-left:0px">
+				<div>
+					<div class="width-250">Produk ini Ready Stock</div>
+					<div class="width-250" style="margin-bottom:8px">Pengiriman: <strong>4-5 hari kerja</strong> ke Jabodetabek</div>
+					<div class="width-250" style="font-size:12px">Waktu pengiriman di atas <u>sudah termasuk</u> 3 hari waktu pemenuhan untuk memproses barang ini</div>
+				</div>
+				<div class="width-250" style="color:#00b1bb">Lihat <strong>Estimasi Waktu Pengiriman</strong> ke Wilayah Lain dan <strong>Jangkauan COD</strong></div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "info-pengiriman",
+
+		ready: function(){
+			console.log("info-pengiriman")
+		}
+	})
+</script>

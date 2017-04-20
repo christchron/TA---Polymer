@@ -1,0 +1,147 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="product-description">
+	<style include="iron-flex">
+		.font-fam{
+		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		    color:#292b2c;
+		}
+		.outer-margin{
+			margin-top: 40px;
+			margin-left: 180px;
+		}
+		.title-deskripsi-produk{
+			font-size: 30px;
+			color:#565a5c;
+			font-weight: normal;
+			margin-left: -2px;
+		}
+		.text-deskripsi-produk{
+			font-size: 15px;
+			margin-top: -10px;
+		}
+		.detil-produk{
+			margin-top: 10px;
+			border-bottom: 1px solid #ccc;
+		}
+		.padding-table-deskripsi{
+		    padding-left: 15px;
+		    padding-right: 25px;
+		    padding-top: 3px;
+		    padding-bottom: 3px;
+		}
+		.width-300{
+			width:300px;
+		}
+		.width-200{
+			width:200px;
+		}
+		th {
+		    text-align: left;
+		}
+
+		th {
+		    background-color: #eee;
+		    color: black;
+		    font-weight: bold;
+		}
+	</style>
+	<template>
+		<div class="layout horizontal outer-margin font-fam">
+			<div style="width:500px">
+				<div class="title-deskripsi-produk">Deskripsi Produk</div>
+				<div class="text-deskripsi-produk"><span>Satu set terdiri dari 5pcs panci dan 5 pcs tutup panci dengan ukuran panci diameter 24cm tinggi 11cm; diameter 22cm tinggi 10cm; diameter 20cm tinggi 10cm; diameter 18cm tinggi 9cm dan diameter 16cm tinggi 8cm.</span></div>
+				<div style="fontSize:15px;text-align:left">
+					<div class="detil-produk">
+						<div style="margin-bottom:10px">Detil Produk</div>
+					</div>
+					<table style="margin-top:12px">
+						<thead >
+							<tr>
+								<th class="padding-table-deskripsi width-200" colspan="2">
+									Detil Produk
+								</th>
+							</tr>
+						</thead>
+						<tbody property="brand">
+							<tr>
+								<td class="padding-table-deskripsi width-200">
+									Brand
+								</td>
+								<td class="padding-table-deskripsi width-300">
+									Ideal
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td class="padding-table-deskripsi width-200">
+									Warna
+								</td>
+								<td class="padding-table-deskripsi width-300">
+									Putih
+								</td>
+							</tr>
+							<tr>
+								<td class="padding-table-deskripsi width-200">
+									Material
+								</td>
+								<td class="padding-table-deskripsi width-300">
+									Stainless
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table>
+						<thead >
+							<tr >
+								<th class="padding-table-deskripsi width-200" colspan="2">
+									Spesifikasi
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="padding-table-deskripsi width-200">
+									Ukuran Kemasan
+								</td>
+								<td class="padding-table-deskripsi width-300">
+									47cm x 28cm x 20cm
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td class="padding-table-deskripsi width-200">
+									Ukuran Barang
+								</td>
+								<td class="padding-table-deskripsi width-300">
+									Sama dengan ukuran kemasan
+								</td>
+							</tr>
+							<tr>
+								<td class="padding-table-deskripsi width-200">
+									Berat
+								</td>
+								<td class="padding-table-deskripsi width-300">
+									5kg
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "product-description",
+
+		ready: function(){
+			console.log("product-description")
+		}
+	})
+</script>

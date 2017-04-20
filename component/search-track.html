@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/hardware-icons.html">
+
+<dom-module id="search-track">
+	<style include="iron-flex">
+		.search-track-style{
+		    margin:10px !important;
+		    color: #82888a;
+		}
+	</style>
+	<template>
+		<div class="layout horizontal search-track-style">
+			<div class="layout horizontal">
+				<div style="margin-top:5px">
+					<iron-icon icon="icons:arrow-back" class="icon" style="margin-top:-15px"></iron-icon>
+				</div>
+				<span style="font-size:15px; margin-left:5px">Kembali</span> 
+			</div>
+			<div style="margin-left:15px">
+				<iron-icon icon="hardware:keyboard-arrow-right" class="icon" style="margin-top:-7px;width:40px;height:30px"></iron-icon>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: "search-track",
+
+		ready: function(){
+			console.log("search-track")
+		}
+	})
+</script>
