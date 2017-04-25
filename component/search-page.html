@@ -1,7 +1,9 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../component/search-track.html">
+<link rel="import" href="../component/item-list.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/mercury-paginator/mercury-paginator.html">
 
 <dom-module id="search-page">
 	<style include="iron-flex">
@@ -9,9 +11,11 @@
 		    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 		    color:#292b2c;
 		}
+		.no-decor{
+			text-decoration: none !important;
+		}
 		.tampilan-hasil{
 			width: 150px;
-			font-size: 13px;
 			height: 1000px;
 			margin-left: 30px;
 			text-align: left;
@@ -49,23 +53,35 @@
 		    font-size: 20px;
 		    color: #82888a;
 		}
+		.paginator-style{
+		    margin-top: -35px;
+		    margin-left: 900px;
+		    height: 27px;
+		}
 	</style>
 	<template>
 		<div class="font-fam">
+			<item-list></item-list>
 			<div class="layout horizontal" style="margin-left:0px">
 				<search-track></search-track>
+				<mercury-paginator perpage="24"
+						on-click="handleClick"
+		                id="page"
+		                pageCount="0"
+		                class="paginator-style">
 			</div>
 			<div class="layout horizontal">
 				<div class="tampilan-hasil">
 					<div><h4 style="text-align:left">Tampilkan hasil untuk: </h4></div>
-					<div class="category">dapur (25)</div>
+					<div class="category">{{category}} ({{totalData}})</div>
 				</div>
 				<div>
+		            </mercury-paginator>
 					<template is="dom-repeat" items="[[chunkedData]]" as="chunked" id="myId">
 						<div class="layout horizontal">
 							<template is="dom-repeat" items="[[chunked]]" as="produk">
 					            <div class="product">
-									<a href="#/produk?id=">
+									<a class="no-decor" href="#/produk/{{produk.id}}">
 										<div class="center" style="height:200px">
 											<img src={{handleUrlName(produk.image)}} class="max-img"/>
 										</div>
@@ -106,33 +122,78 @@
             chunkedData:{
             	type: Array
             },
-            test:{
-            	type:Array,
-            	value:[[{name:"randi",price:15324},{name:"randi",price:15324},{name:"randi",price:15324},{name:"randi",price:15324}]]
+            totalData:{
+            	type: Number
+            },
+            usedData:{
+            	type:Array
             }
         },
         ready: function () {
             this.$.requestProductData.generateRequest();
         },
-        handleResponse: function (data) {
+        handleClick: function() {
+        	var temp=[];
         	var tempData=[];
-            this.data = data.detail.response;
-            var temp = [];
-            for (var i = 0;i<data.detail.response.produk.length;i++){
-            	temp.push(data.detail.response.produk[i])
-            	if (i == data.detail.response.produk.length-1){
+        	for (var i = 0;i<this.usedData[this.$.page.currentpage].length;i++){
+            	temp.push(this.usedData[this.$.page.currentpage][i])
+            	if (i == this.usedData[this.$.page.currentpage].length-1){
             		tempData.push(temp);
             	}
-            	if (data.detail.response.produk[i].id%4 == 0){
+            	if (this.usedData[this.$.page.currentpage][i].id%4 == 0){
             		tempData.push(temp);
             		temp=[];
             	}
             }
-            this.data=tempData;
-            console.log('data',this.data);
-            this.chunkedData=tempData;
-            this.$.myId.render()
 
+            this.chunkedData=tempData;
+
+            this.$.myId.render();
+        },
+
+        handleResponse: function (data) {
+        	var tempData=[];
+        	this.usedData=[];
+            this.data = data.detail.response;
+            var temp = [];
+            var categoryData=[];
+            for (var i = 0;i<this.data.produk.length;i++){
+            	if(this.data.produk[i].category==this.category){
+            		categoryData.push(this.data.produk[i]);
+            	}
+            }
+
+            this.totalData=categoryData.length;
+
+            var idx=0;
+
+            while (idx<this.totalData){
+            	this.usedData.push(categoryData.slice(idx,idx+=this.$.page.perpage));
+            }
+
+            console.log('used',this.usedData)
+
+            for (var i = 0;i<this.usedData[this.$.page.currentpage].length;i++){
+            	temp.push(this.usedData[this.$.page.currentpage][i])
+            	if (i == this.usedData[this.$.page.currentpage].length-1){
+            		tempData.push(temp);
+            	}
+            	if (this.usedData[this.$.page.currentpage][i].id%4 == 0){
+            		tempData.push(temp);
+            		temp=[];
+            	}
+            }
+            this.chunkedData=tempData;
+
+            var model = {
+	            items: []
+	        };
+
+            for (var i = 1; i <= categoryData.length; i++) {
+	            model.items.push(categoryData[i]);
+	        }
+	        this.$.page.data = model.items;
+            this.$.myId.render()
         },
         handleUrlName: function (url){
         	return "../assets/image/"+url;

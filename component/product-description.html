@@ -51,7 +51,7 @@
 		<div class="layout horizontal outer-margin font-fam">
 			<div style="width:500px">
 				<div class="title-deskripsi-produk">Deskripsi Produk</div>
-				<div class="text-deskripsi-produk"><span>Satu set terdiri dari 5pcs panci dan 5 pcs tutup panci dengan ukuran panci diameter 24cm tinggi 11cm; diameter 22cm tinggi 10cm; diameter 20cm tinggi 10cm; diameter 18cm tinggi 9cm dan diameter 16cm tinggi 8cm.</span></div>
+				<div class="text-deskripsi-produk"><span>{{productdata.description}}</span></div>
 				<div style="fontSize:15px;text-align:left">
 					<div class="detil-produk">
 						<div style="margin-bottom:10px">Detil Produk</div>
@@ -70,7 +70,7 @@
 									Brand
 								</td>
 								<td class="padding-table-deskripsi width-300">
-									Ideal
+									{{productdata.brand}}
 								</td>
 							</tr>
 						</tbody>
@@ -80,7 +80,7 @@
 									Warna
 								</td>
 								<td class="padding-table-deskripsi width-300">
-									Putih
+									{{productdata.color}}
 								</td>
 							</tr>
 							<tr>
@@ -88,7 +88,7 @@
 									Material
 								</td>
 								<td class="padding-table-deskripsi width-300">
-									Stainless
+									{{productdata.material}}
 								</td>
 							</tr>
 						</tbody>
@@ -107,7 +107,7 @@
 									Ukuran Kemasan
 								</td>
 								<td class="padding-table-deskripsi width-300">
-									47cm x 28cm x 20cm
+									{{productdata.box_size}}
 								</td>
 							</tr>
 						</tbody>
@@ -117,7 +117,7 @@
 									Ukuran Barang
 								</td>
 								<td class="padding-table-deskripsi width-300">
-									Sama dengan ukuran kemasan
+									{{productdata.item_size}}
 								</td>
 							</tr>
 							<tr>
@@ -125,7 +125,7 @@
 									Berat
 								</td>
 								<td class="padding-table-deskripsi width-300">
-									5kg
+									{{productdata.weight}}
 								</td>
 							</tr>
 						</tbody>

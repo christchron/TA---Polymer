@@ -63,11 +63,11 @@
 	</style>
 	<template>
 		<div class="layout horizontal font-fam" style="margin-left:150px">
-			<img src="../assets/image/dapur-1.jpg" style="width:150px; height:100%"/>
-			<img src="../assets/image/dapur-1.jpg" style="margin:50px;width:550px; height:100%"/>
+			<img src={{handleUrlName(productdata.image)}} style="width:150px; height:100%"/>
+			<img src={{handleUrlName(productdata.image)}} style="margin:50px;width:550px; height:100%"/>
 			<div style="width:400px; color:#6A6a6a">
-				<h1 class="product-view-name">IDEAL PANCI MASAK TROPICANA SET 16/24 CM BLUE ROYAL HERITAGE</h1>
-				<div class="product-view-description">Panci dari Ideal</div>
+				<h1 class="product-view-name">{{productdata.name}}</h1>
+				<div class="product-view-description">{{productdata.item_and_brand}}</div>
 				<div style="font-size:15px; margin-top:15px" >
 					<img src="../assets/image/icon-ongkir-gratis.png" style="width:27px"/>
 					<span> GRATIS Ongkir + Bayar di tempat*</span>
@@ -75,7 +75,7 @@
 				<div class="layout horizontal price-style">
 					<div style="margin-top:5px">
 						<span class="price" role="currency" >Rp</span>
-						<span class="price" role="price">325000</span>
+						<span class="price" role="price">{{productdata.price}}</span>
 					</div>
 					<div class="ready-stock">
 						<span>Produk ini Ready Stock</span>
@@ -85,7 +85,7 @@
 					<button type="submit" class="btn btn-x-large btn-block btn-primary btn-beli-sekarang">Beli Sekarang</button>
 				</div>
 				<div class="stock-amount">
-					<span>Stok tersedia 7 buah</span>
+					<span>Stok tersedia {{productdata.stok}} buah</span>
 				</div>
 				<div>
 					<img src="../assets/image/multibuy-offer.png"/>
@@ -100,7 +100,10 @@
 		is: "product-view",
 
 		ready: function(){
-			console.log("work")
-		}
+			console.log("productData",this.productdata)
+		},
+		handleUrlName: function (url){
+        	return "../assets/image/"+url;
+        }
 	})
 </script>  
