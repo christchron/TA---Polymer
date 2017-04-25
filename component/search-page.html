@@ -55,7 +55,7 @@
 		}
 		.paginator-style{
 		    margin-top: -35px;
-		    margin-left: 900px;
+		    margin-left: 750px;
 		    height: 27px;
 		}
 	</style>
@@ -64,10 +64,11 @@
 			<item-list></item-list>
 			<div class="layout horizontal" style="margin-left:0px">
 				<search-track></search-track>
-				<mercury-paginator perpage="24"
+				<mercury-paginator perpage="2"
 						on-click="handleClick"
 		                id="page"
-		                pageCount="0"
+		                show-first="true"
+		                show-last="true"
 		                class="paginator-style">
 			</div>
 			<div class="layout horizontal">
@@ -145,7 +146,6 @@
             		temp=[];
             	}
             }
-
             this.chunkedData=tempData;
 
             this.$.myId.render();
@@ -193,6 +193,7 @@
 	            model.items.push(categoryData[i]);
 	        }
 	        this.$.page.data = model.items;
+	        console.log(this.$.page.pageCount)
             this.$.myId.render()
         },
         handleUrlName: function (url){
